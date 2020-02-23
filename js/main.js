@@ -26,7 +26,7 @@ class Quiz {
         // Render screen class
         this.screens = new Screens(this.player);
         // Generate randomArray of questions based on number
-        this.highScores = []
+        this.highScores = [{name:'Erik',score: 100},{name:'Pieter',score: 40},{name:'Marie',score: 30}]
         this.number = number;
         this.questionsArray = this.getRandomQuestions();
         // Set variables for the timer elements
@@ -41,7 +41,7 @@ class Quiz {
 
     // Initialise a new game
     startGame() {
-        this.highScores = JSON.parse(localStorage.getItem('highscores'));
+        
         this.screens.renderIntroductionScreen();
         // Add event listeners for different screens        
         this.addEventListenerIntro()
@@ -190,12 +190,12 @@ class Quiz {
     }
 
     addScorePlayer(player) {
+        console.log(this.highScores)
         this.highScores.push(player);
         this.highScores.sort(function (a, b) {
             return b.score - a.score;
-        });
-        localStorage.setItem('highscores', JSON.stringify(this.highScores));
-
+        });    
+        console.log(this.highScores)
     }
 }
 

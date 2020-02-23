@@ -204,6 +204,7 @@ class Screens {
 
 
     renderResultScreen(score, highscores) {
+        console.log(highscores)
     let resultText = '';
     if (score > 100 ) {
     resultText = `Great work`;
@@ -221,25 +222,14 @@ class Screens {
 
         var highScoreContainer = document.getElementById('highscores')
         var domStringRows = '';
-
-
         for (let i = 0; i < highscores.length; i++) {
-
-            domStringRows += `<tr><td>${highscores[i].name}</td><td>${highscores[i].score}</td></tr>`
-
-
+            console.log(highscores[i].name)
+            domStringRows += `<tr><td>${highscores[i].name}</td><td>${highscores[i].score}
+            </td></tr>`
             if (i > 2) {
-
+                console.log(domStringRows)
                 return highScoreContainer.innerHTML = domStringRows;
-
-
             }
-
         }
-
-
-
-
     }
-
 }
