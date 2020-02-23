@@ -1,0 +1,495 @@
+html,
+body {
+
+    background-color: rgb(245, 245, 245);
+    font-family: 'Righteous', ;
+
+}
+
+
+header {
+
+    height: 100px;
+    background-color: rgb(245, 245, 245);
+
+
+}
+
+div.title-header {
+
+background-color: rgb(255, 255, 255);
+padding: 30px;
+width: 100%;
+color: red;
+
+}
+
+div.input-group {
+
+width: 50%;
+
+}
+
+ul.ticker {
+
+    margin-top: 20px;
+
+}
+
+ul.ticker li {
+
+    display: inline;
+    list-style: none;
+    padding: 10px;
+
+
+}
+
+div.start-screen {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px
+
+}
+
+
+#game {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 100%;
+}
+
+div.introduction {
+
+    background-color: #e5eff8;
+    border-color: #468CCB;
+    border-top: 2px solid;
+    margin: 20px 100px 20px 100px;
+    padding: 20px;
+
+
+}
+
+
+
+#game div.multiplechoice {
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 700%;
+    height: 100%;
+
+}
+
+#game div.top {
+
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px 5px 50px;
+    justify-content: space-between;
+
+}
+
+span#timer {
+    
+    border-radius: 50%;
+    border: solid red;
+    font-size: 25px;
+    color: red;
+    padding: 20px;
+    font-weight: bolder;
+    border-width: 4px;
+   
+}
+
+span.score-player {
+
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: greenyellow;
+
+}
+
+ul li.answer {
+
+    margin: 20px 0px 20px 0px;
+    list-style: none;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: #303030;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: normal;
+    height: auto;
+    line-height: 24px;
+    padding: 15px 60px 15px 60px;
+    position: relative;
+    text-align: left;
+    transition: border-color 0.25s cubic-bezier(0.26, 0.88, 0.57, 0.9);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    counter-increment: answers;
+
+
+}
+
+.answer.right-answer {
+
+    border: solid greenyellow;
+
+}
+
+.answer.chosen-answer {
+
+    border: solid rgb(255, 47, 47);
+
+}
+
+ul li.answer:before {
+    border-radius: 3px;
+    color: #468ccb;
+    content: counter(answers, upper-alpha);
+    display: inline-block;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    margin-left: -30px;
+    margin-right: 10px;
+    text-align: center;
+    width: 16px;
+}
+
+
+
+ul li.answer:hover {
+    border-color: #468ccb;
+    cursor: pointer;
+
+}
+
+
+#game div.question-container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+
+
+}
+
+#game div.question-image {
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+#game div.feedback-container {
+
+
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 30px;
+
+
+}
+
+.button-container {
+
+padding-left: 30px;
+display: flex;
+justify-content: center;
+
+
+}
+
+
+#highscores {
+
+padding: 30px;
+
+
+}
+
+
+#game div.feedback {
+ 
+    background-color: #e5eff8;
+    border-color: #468CCB;
+    border-top: 2px solid;
+    margin: 10px 40px 10px 10px;
+    padding: 10px;
+
+}
+
+#game div.bottom {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+
+}
+
+table.table>thead>tr>th {
+    color: #303030;
+    border-bottom: 2px solid #8CD600;
+}
+
+
+table.table>tr th,
+table.table>thead>tr th,
+table.table>tbody>tr th {
+    text-transform: uppercase;
+}
+
+table.table>tr th,
+table.table>tr td,
+table.table>thead>tr td,
+table.table>tbody>tr td {
+    padding: 15px 10px;
+    background: transparent;
+    font-size: 15px;
+    text-align: left;
+    word-break: normal;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    vertical-align: top;
+
+}
+
+table.quote.box {
+
+width: 50%;
+
+}
+
+
+table.quote-box thead tr {
+
+    border-color: #E0E0E0;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    text-align: center;
+
+}
+
+table.quote-box tbody tr {
+ 
+    padding: 5px;
+
+}
+
+table.quote-box tbody tr:first-child {
+    background-color: #424242;
+    padding: 5px;
+
+}
+
+table.quote-box tbody tr td {
+
+    text-align: center;
+    padding: 10px;
+    color: #424242;
+    background: #FEFCED;
+    border-color: #E0E0E0;
+    padding: 0px 20px 0px 20px;
+    border-bottom: #bdbdbd;
+
+}
+
+table.quote-box tbody tr td:nth-child(4):not(:last-child) {
+
+    background-color:  #bdbdbd;
+    padding: 0px 20px 0px 20px;
+    pointer-events: none;
+
+}
+
+table.quote-box tbody tr:hover {
+
+    border: solid blue;
+    cursor: pointer;
+}
+
+table.trade-box {
+
+    margin-top: 15px;
+    width: 50%;
+    font-size: 15px;
+    padding: 10px;
+
+}
+
+table.trade-box tbody tr:first-child {
+    background-color: #bdbdbd;;
+    padding: 5px;
+   
+}
+
+table.trade-box tbody tr:nth-child(2) {
+    background-color: #FEFCED;
+    padding: 5px;
+   
+}
+
+
+
+table.trade-box tbody tr:hover {
+
+    background-color: rgb(228, 228, 228);
+    cursor: pointer;
+
+}
+
+
+table.quote-box tbody tr.active-left-buy td:nth-child(-n+3) {
+
+    border-bottom: solid rgb(102, 211, 0);
+    border-top: solid rgb(102, 211, 0);
+    pointer-events: none;
+
+}
+
+table.quote-box tbody tr.active-right-buy td:nth-child(n+5) {
+
+    border-bottom: solid rgb(102, 211, 0);
+    border-top: solid rgb(102, 211, 0);
+    pointer-events: none;
+
+}
+
+table.quote-box tbody tr.active-right-buy td:nth-child(7) {
+
+    border-right: solid rgb(102, 211, 0);
+    pointer-events: none;
+   
+}
+
+table.quote-box tbody tr.active-left-buy td:nth-child(1) {
+
+    border-left: solid rgb(102, 211, 0);
+    pointer-events: none;
+   
+}
+
+table.quote-box tbody tr.active-left-buy td:nth-child(3) {
+
+    border-right: solid rgb(102, 211, 0);
+    pointer-events: none;
+   
+}
+
+table.quote-box tbody tr.active-right-sell td:nth-child(7) {
+
+    border-right: solid rgb(255, 0, 0);
+    pointer-events: none;
+   
+}
+
+
+
+table.quote-box tbody tr.active-right-buy td:nth-child(5) {
+
+    border-left: solid rgb(102, 211, 0);
+    pointer-events: none;
+   
+}
+
+
+table.quote-box tbody tr.active-right-sell td:nth-child(n+5) {
+
+    border-bottom: solid rgb(211, 0, 0);
+    border-top: solid rgb(211, 0, 0);
+    pointer-events: none;
+
+}
+
+table.quote-box tbody tr.active-right-sell td:nth-child(7) {
+
+    border-right: solid rgb(211, 0, 0);
+    pointer-events: none;
+   
+}
+
+table.quote-box tbody tr.active-left-sell td:nth-child(-n+3) {
+
+    border-bottom: solid rgb(211, 0, 0);
+    border-top: solid rgb(230, 0, 0);
+    pointer-events: none;
+
+}
+
+table.quote-box tbody tr.active-right-sell td:nth-child(5) {
+
+    border-left: solid rgb(211, 0, 0);
+    pointer-events: none;
+
+}
+
+
+
+table.quote-box tbody tr.active-left-sell td:nth-child(1) {
+
+    border-left: solid rgb(211, 0, 0);
+    pointer-events: none;
+
+}
+
+table.quote-box tbody tr.active-left-sell td:nth-child(3) {
+
+    border-right: solid rgb(211, 0, 0);
+    pointer-events: none;
+
+}
+
+img.cboe {
+
+width: 50%;
+
+
+}
+
+
+img.image-header {
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
+
+}
+
+div.result-container {
+
+display: flex;
+justify-content: center;
+font-size: 30px;
+font-weight: bolder;
+-webkit-animation: blink 2s step-end infinite;
+animation: blink 2s step-end infinite;
+
+}
+
+div.result {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+        @keyframes blink { 50% { visibility: hidden; }}
