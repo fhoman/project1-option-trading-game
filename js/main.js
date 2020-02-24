@@ -90,7 +90,7 @@ class Quiz {
     this.timeoutID = setTimeout(() => {
       // Update score if the timeout is finished
       this.calculateScore()
-      // no answer was give is updated in the answer array
+      // no answer was given is updated in the answer array
       this.player.answers.push({
         answer: null,
         state: false,
@@ -137,17 +137,16 @@ class Quiz {
   }
 
   setTimer () {
-    this.timeElement = document.getElementById('timer')
-    this.timerID = setInterval(countdown.bind(this), 1000)
-
-    function countdown () {
-      if (this.timeQuestion === 0) {
+    let timeQuestion = this.timeQuestion
+    this.timerID = setInterval(function () {
+      this.timeElement = document.getElementById('timer')
+      if (timeQuestion === 0) {
         clearTimeout(this.timerID)
       } else {
-        this.timeElement.innerHTML = `${this.timeQuestion}`
-        this.timeQuestion--
+        this.timeElement.innerHTML = `${timeQuestion}`
+        timeQuestion--
       }
-    }
+    }, 1000)
   }
 
   calculateTimeBonus () {
