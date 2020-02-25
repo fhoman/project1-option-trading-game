@@ -57,13 +57,13 @@ class Quiz {
   }
 
   getRandomQuestions () {
-    const number = this.number
+   
     const data = []
-    JSON.parse(JSONdata).forEach(function (element, index) {
+    JSON.parse(JSONdata).forEach((element, index) => {
       if (element.category === 'multiple' || 'trade-demo') {
         data.push(element)
       }
-      if (index > number - 1) {
+      if (index > this.number - 1) {
         return data
       }
     })
@@ -137,14 +137,14 @@ class Quiz {
   }
 
   setTimer () {
-    let timeQuestion = this.timeQuestion
-    this.timerID = setInterval(function () {
+   
+    this.timerID = setInterval(() => {
       this.timeElement = document.getElementById('timer')
-      if (timeQuestion === 0) {
+      if (this.timeQuestion === 0) {
         clearTimeout(this.timerID)
       } else {
-        this.timeElement.innerHTML = `${timeQuestion}`
-        timeQuestion--
+        this.timeElement.innerHTML = `${this.timeQuestion}`
+        this.timeQuestion--
       }
     }, 1000)
   }
@@ -164,7 +164,7 @@ class Quiz {
   }
 
   addEventListenerStart () {
-    this.screens.divElement.addEventListener('click', function (e) {
+    this.screens.divElement.addEventListener('click', (e) => {
       if (e.target.id === 'start-game') {
         location.reload()
       }
@@ -204,12 +204,10 @@ class Quiz {
   }
 
   addScorePlayer (player) {
-    console.log(this.highScores)
     this.highScores.push(player)
-    this.highScores.sort(function (a, b) {
+    this.highScores.sort((a, b) => {
       return b.score - a.score
-    })
-    console.log(this.highScores)
+    })  
   }
 }
 

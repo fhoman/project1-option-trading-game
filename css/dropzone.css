@@ -1,0 +1,24 @@
+.dragable-container {
+
+display: flex;
+flex-direction: column;
+
+
+}
+
+
+.dropzone  {
+
+    background-color: red;
+
+
+}
+
+
+
+.drag-items {
+
+
+   background-color: blue;
+
+}

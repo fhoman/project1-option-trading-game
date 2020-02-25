@@ -69,7 +69,6 @@ class Screens {
         <div class='feedback'>${question.feedback}</div>
         <div><button class='btn btn-warning' id='next-question'>
         Next question</button></div></div></div></div></div>`
-
       var answersContainer = document.getElementById('multiplechoice')
       question.answers.forEach(element => {
         var node = document.createElement('LI')
@@ -178,7 +177,6 @@ class Screens {
     total score is ${score}! <br><br></div><div class='feedback-container'> 
     <table class='table'><thead><tr><th>Player </th><th>Score</th></tr></thead>
     <tbody id='highscores'></tbody></table></div></div>`
-
     var highScoreContainer = document.getElementById('highscores')
     var domStringRows = ''
     for (let i = 0; i < highscores.length; i++) {
